@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static com.psl.integrador.model.enums.Status.opened;
 import static com.psl.integrador.model.enums.Status.toOpen;
 import static com.psl.integrador.model.enums.Status.closed;
+import static org.assertj.core.api.Assertions.not;
 import static org.hamcrest.beans.SamePropertyValuesAs.samePropertyValuesAs;
 import static org.junit.Assert.*;
 
@@ -101,6 +102,6 @@ public class TopicServiceTest {
         t1.setStatus(toOpen);
         Topic t2 = topicService.add(t1);
 
-        assertThat(t2, samePropertyValuesAs(topicService.getTopicById(t2.getId())));
+        assertThat( not(t2), samePropertyValuesAs(topicService.getTopicById(t2.getId())));
     }
 }
