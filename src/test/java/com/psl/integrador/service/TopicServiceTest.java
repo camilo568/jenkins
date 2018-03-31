@@ -102,6 +102,6 @@ public class TopicServiceTest {
         t1.setStatus(toOpen);
         Topic t2 = topicService.add(t1);
 
-        assertThat( not(t2), samePropertyValuesAs(topicService.getTopicById(t2.getId())));
+        assertThat(t2, samePropertyValuesAs(topicService.getTopicById(t2.getId())));
     }
 }
