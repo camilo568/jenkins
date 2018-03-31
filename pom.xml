@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    Error<name>integrador</name>
+    <name>integrador</name>
     <description>Project for Integrador 2018</description>
 
 
